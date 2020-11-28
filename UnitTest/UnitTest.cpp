@@ -110,6 +110,24 @@ namespace UnitTest
 			Assert::IsTrue(bst->contains(12));
 		}
 
+		TEST_METHOD(remove_test_2)
+		{
+			bst->insert(8);
+			bst->insert(6);
+			bst->insert(7);
+			bst->insert(10);
+			bst->insert(18);
+			bst->remove(6);
+			Assert::IsFalse(bst->contains(6));
+		}
+
+		TEST_METHOD(remove_test_3)
+		{
+			bst->insert(8);
+			bst->remove(8);
+			Assert::IsFalse(bst->contains(8));
+		}
+
 		TEST_METHOD(remove_test_no_element)
 		{
 			try {
