@@ -59,6 +59,14 @@ namespace UnitTest
 			Assert::IsTrue(bst->contains(12));
 		}
 
+		TEST_METHOD(contains_test_no_element)
+		{
+			bst->insert(8);
+			bst->insert(3);
+			bst->insert(1);
+			Assert::IsFalse(bst->contains(10));
+		}
+
 		TEST_METHOD(insert_test)
 		{
 			bst->insert(10);
